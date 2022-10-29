@@ -1,11 +1,11 @@
 package com.certus.spring.controller;
 
-//import java.util.ArrayList;
-//import java.util.List;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-//import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,8 +18,8 @@ import com.certus.spring.service.IPersonajeService;
 @RequestMapping("/app")
 public class HomeController {
 
-//	@Value("${title.generic}")
-//	private String titlePage;
+	@Value("${title.generic}")
+	private String titlePage;
 		
 	@Autowired
 	@Qualifier("servicio1")
@@ -32,8 +32,8 @@ public class HomeController {
 
 	@GetMapping({ "/home", "/inicio", "/", "/Home", "/Inicio" })
 	public String Home(Model model) {
-//		model.addAttribute("TituloPagina", titlePage);
-//		model.addAttribute("titulo", "Sección J98 - Demo listado");
+		model.addAttribute("TituloPagina", titlePage);
+		model.addAttribute("titulo", "Sección J98 - Demo listado");
 		
 		//List<Personaje>  listasUnidas =  new ArrayList<>();
 		
