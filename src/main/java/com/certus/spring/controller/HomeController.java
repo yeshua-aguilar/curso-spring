@@ -18,8 +18,8 @@ import com.certus.spring.service.IPersonajeService;
 @RequestMapping("/app")
 public class HomeController {
 
-	@Value("${title.generic}")
-	private String titlePage;
+//	@Value("${title.generic}")
+//	private String titlePage;
 		
 	@Autowired
 	@Qualifier("servicio1")
@@ -32,8 +32,8 @@ public class HomeController {
 
 	@GetMapping({ "/home", "/inicio", "/", "/Home", "/Inicio" })
 	public String Home(Model model) {
-		model.addAttribute("TituloPagina", titlePage);
-		model.addAttribute("titulo", "Sección J98 - Demo listado");
+//		model.addAttribute("TituloPagina", titlePage);
+//		model.addAttribute("titulo", "Sección J98 - Demo listado");
 		
 		//List<Personaje>  listasUnidas =  new ArrayList<>();
 		
